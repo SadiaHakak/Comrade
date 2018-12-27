@@ -1,0 +1,126 @@
+.header__img{
+    width:10rem;
+    transform:scale(1.1);
+    margin-left:3rem;
+    
+
+}
+// .................................. SEARCH BOX......................................
+// 
+.search{
+    flex:0 0 40%;   //to set width of flex-items we use flex-basis instead of width
+   
+    display:flex;
+    justify-content:center;
+    align-items:center;
+	&__input{
+      flex:0 0 90%;
+      box-shadow:0 1rem 1.2rem rgba(grey,.05);
+      border:none;
+      border-radius:50rem;
+      padding:.7rem 2rem;
+      font-size: inherit;  //bcoz input dosent inherit by default
+      font-family: inherit;
+      color:var(--grey-dark-3);
+      background-color:var(--grey-light-2);
+      transition:all .3s ease-in;
+      &:focus{
+       flex:100%;
+       outline:none;
+       background-color:var(--grey-light-3);
+       
+      }
+      
+      &::-webkit-input-placeholder{
+        font-weight: 100;
+        color:var(--grey-light-4);
+      }
+    }
+
+    &__input:focus + &__button{
+    	background-color:var(--grey-light-3);
+
+    }
+   
+
+	&__button{
+		border:none;
+		margin-left:-4rem;
+		background-color:var(--grey-light-2);
+    outline:none; //to get rid of blue border when clicked
+
+	}
+	&__icon{
+		height:2rem;
+		width:2rem;
+		fill:var(--grey-dark-3); //to change the color of icon
+
+	}
+}
+
+
+//  ....................USER NAV...................................
+.user-nav{
+
+	display:flex;
+	
+	align-items:stretch;  
+     height:100%;
+	& > * {
+       padding:0 2rem;
+       cursor: pointer;
+       display:flex;      //to treat each icon. box as flex container and we can set the contents vertically in center
+       align-items:center;
+       
+	}
+    
+    & > *:hover{          //all child elements that have been hovered
+    	background-color:var(--grey-light-2);
+    }
+
+
+	&__icon-box{
+      position:relative;
+    }
+
+    &__icon-box:hover &__notification{
+        transform: scale(1.2);
+        box-shadow:0 .5rem 1rem rgba(grey,0.9);
+      }
+	&__notification{
+      height:1.75rem;
+      width:1.75rem;
+      font-size:.8rem;
+      border-radius:100%;
+      background-color:#660033;
+      color:white;
+      position:absolute;
+      top:1rem;
+      right:1.1rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:all .2s;
+	}
+	
+	&__icon{
+        height:2.25rem;
+        width:2.25rem;
+        fill:var(--grey-dark-2);
+	}
+
+	&__user:hover >*{
+       transform:scale(1.1);
+	}
+	&__user-name{
+      color:var(--grey-dark-2);
+      text-shadow: 0 .5rem .5rem rgba(grey,.15);
+	}
+	&__user-photo{
+        height:3.75rem;
+        width:3.75rem;
+        border-radius:100%; //to make photo circular
+        margin-right:1.2rem;
+	}
+
+}

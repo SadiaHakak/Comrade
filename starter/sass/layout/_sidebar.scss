@@ -1,0 +1,103 @@
+.sidebar{
+   display:flex;
+   flex-direction: column;
+   justify-content:space-between;
+
+   
+   
+   
+   &__nav{
+     font-size:1.4rem;
+     list-style:none;
+     margin:3rem 1rem;
+
+     @media only screen and (max-width:65.25em){
+      flex-direction:row;
+      display:flex;
+      margin:0;
+      justify-content:space-between;
+     }
+     
+   }
+
+   &__item:not(:last-child){
+    
+    margin-bottom:.75rem;
+    display:block;
+   }
+   &__item{
+   	  background-image:linear-gradient(120deg,transparent 0%,transparent 50%,grey 50%);
+	    background-size:250%;
+	    transition:all .35s;
+
+     //   @media only screen and (max-width:65.25em){
+     //     flex:1;
+     // }
+
+    &:hover {
+       background-position:100%;
+    }
+   }
+
+   &__link{
+    
+   	&:link,
+   	&:visited{
+   		text-decoration: none;
+        color:var(--grey-light-2);
+        text-transform: uppercase;
+        display:block;
+        padding:1rem 2rem;
+
+        display:flex;    //to align icon and text
+      	align-items:center;
+
+
+             @media only screen and (max-width:37.5em){
+                   flex-direction:column;  //this places the icons above text in each nav link
+
+             }
+      	
+      	 }
+
+   	   &:active{
+   	   	background-color:var(--grey-light-1);
+   	   }
+   	}
+   	
+   
+
+   
+
+   &__icon{
+   	height:3rem;
+   	width:3rem;
+   	fill:currentColor; //color of the same element
+   	margin-right:2rem;
+
+             @media only screen and (max-width:37.5em){
+                       margin-right:0;
+                        height:2rem;
+                        width:2rem;
+                        margin-bottom:7px;
+                       
+             }
+   }
+   	
+}
+
+
+// ..............legal text...........
+.legal{
+	font-size: 1.4rem;
+	color:currentColor;
+	text-align: center;
+	padding:2.5rem;
+	font-weight: 200;
+   @media only screen and (max-width:65.25em){
+      display:none;
+     } 
+	
+
+}
+

@@ -1,0 +1,102 @@
+.container{
+	max-width:120rem; //full width when w is less than 1200px
+  background-color:var(--grey-light-1);
+  margin:8rem auto;  //for centering the container
+   
+    box-shadow:var(--shadow-base);
+    position: relative;
+
+    @media only screen and (max-width:75em){
+      margin:0;
+      max-width:100%;
+      width:100%;
+    }
+     // @media only screen and (max-width:37.5em){
+     //          width:100%; //this places the icons above text in each nav link
+
+     //         }
+     //    @media only screen and (max-width:31.25em){
+     //          width:100%; //this places the icons above text in each nav link
+
+     //         }
+
+  }
+
+.header{
+   background-image: linear-gradient(lightyellow,grey);
+   
+   background-size:cover;
+   font-size: 1.4rem;
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+   height: 6rem;
+   
+}
+// ..........................................MAIN.....................................
+.content{
+     display:flex;
+
+     @media only screen and (max-width:65.25em){
+      flex-direction: column;
+     }
+ }
+
+	.sidebar{
+     background-image:linear-gradient(to bottom,#660033,#000066);
+	}
+
+	.hotel-view{
+     
+     
+     flex:1;
+	}
+// ..........................................details...................................
+// 
+ .details{
+ 	display:flex;
+ 	padding:4.5rem;
+ 	border-bottom:1px solid var(--grey-light-2);
+  background-image:linear-gradient(rgba(#404040,.9),rgba(#404040,.9)),url(../img/hotel-2a.jpg);
+  background-size:cover;
+  font-size: 1.4rem;
+  color:#999;
+
+  @media only screen and (max-width:65.25em){
+      padding:2rem;
+     } 
+
+  @media only screen and (max-width:37.5em){
+       flex-direction:column;
+      }
+ }
+ .description{
+    background-color:white;
+    box-shadow:0 2rem 6rem rgba(#000066,.4);
+    flex:0 0 60%;
+    margin-right:4.5rem;
+    padding:3rem;
+
+    @media only screen and (max-width:65.25em){
+      padding:2rem;
+      margin-right:2rem;
+     } 
+
+
+    @media only screen and (max-width:37.5em){
+        margin-right:0;
+      }
+    
+ }
+ .user-reviews{
+    // background-color:#404040;
+    background-color:transparent;
+    flex:1;  //occupies the remaining white space;
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+
+
+ }
